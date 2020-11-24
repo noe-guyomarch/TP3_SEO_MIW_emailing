@@ -1,0 +1,95 @@
+// SCSS permetant le style du menu hamburger
+
+
+// initialisation des variables
+$widthChange : 700px;
+
+$btnColor : rgb(209, 209, 209);
+$btnColorHover : rgb(7, 7, 7);
+
+$textColor : rgb(133, 28, 42);
+$textColorHover : rgb(255, 255, 255);
+
+$barrnavWhidth : 200px;
+
+
+// class d ajout
+.hidden{
+    visibility: hidden;
+}
+
+
+.barrnav{
+    margin: 15px;
+    float: right;
+    width: $barrnavWhidth;
+}
+
+.barrnav, .menu{
+    display: flex;
+    flex-direction: column;
+}
+
+.hamb{
+    width: 30%;
+    align-self: flex-end;
+}
+
+
+.menu a{
+    display: flex;
+    height: 50px;
+
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3em;
+    background-color: $btnColor;
+    color: $textColor;
+    border-radius: 5px;
+
+    margin: 5px 0px;
+}
+
+
+.hamb:hover, .menu a:hover{
+    opacity: 0.8;
+    text-decoration: none;
+}
+
+
+// desktop et tablettes
+@media screen and (min-width: $widthChange) {
+
+    // suppression de l ico
+    .hamb {
+        display: none;
+    }
+
+    .menu, .barrnav{
+        flex-direction: row;
+    }
+    .barrnav{
+        float: none;
+        width: 100%;
+        margin: 0px;
+    }
+    .menu{
+        flex-direction: row;
+        justify-content: space-around;
+        visibility: visible;
+        height: 100%;
+        width: 100%;
+        background-color: $btnColor;
+    }
+    .menu>div{
+        width: 100%;
+    }
+    .menu a{
+        margin: 0px;
+        border-radius: 0px;
+    }
+    .menu a:hover{
+        background-color: $btnColorHover;
+        color: white;
+    }
+}
