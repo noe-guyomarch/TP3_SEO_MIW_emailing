@@ -42,7 +42,7 @@ if (!empty($_GET['delivery']) and $_GET['delivery'] === "sent") {
 
         <div class="center">
             <form action="send_email.php" method="POST">
-                <input type="email" value="noguyomarch@gmail.com" name="email" placeholder="Ton email de star..." required />
+                <input type="email" name="email" placeholder="Ton email de star..." required />
                 <button type="submit">
                     <p>Inscris-toi !</p>
                     <div>
